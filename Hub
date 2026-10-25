@@ -1,48 +1,306 @@
-</body>
-</html> html>
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Renainttuff</title>
-<style>
-body{background:#0a0a0f;color:white;font-family:sans-serif;text-align:center;padding:30px}
-.card{background:#15151d;border:1px solid #24243a;border-radius:16px;padding:20px;margin:15px auto;max-width:400px;text-align:left}
-.badge{background:#1e1e30;color:#a78bfa;padding:4px 10px;border-radius:20px;font-size:11px}
-.code{background:#0c0c12;padding:10px;border-radius:8px;font-family:monospace;font-size:11px;margin:10px 0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;color:#c4b5fd}
-.btn{width:100%;padding:12px;border-radius:10px;border:none;background:#8b5cf6;color:white;font-weight:800;cursor:pointer}
-a{color:#8b5cf6;text-decoration:none;font-weight:700}
-h1{font-size:36px} h1 span{color:#8b5cf6}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0a0f">
+  <meta name="description" content="Renainttuff Scripts - MM2, SAB, ADM and more.">
+  <title>Renainttuff Scripts</title>
+
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --card: #15151d;
+      --border: #292940;
+      --purple: #8b5cf6;
+      --text: #ffffff;
+      --muted: #9ca3af;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 40px 18px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    header {
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 7vw, 44px);
+      letter-spacing: -1.5px;
+    }
+
+    h1 span {
+      color: var(--purple);
+    }
+
+    .subtitle {
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 22px;
+      margin: 22px 0 35px;
+    }
+
+    a {
+      color: #a78bfa;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    a:hover {
+      color: white;
+    }
+
+    main {
+      width: 100%;
+      max-width: 440px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .card {
+      padding: 22px;
+      margin-bottom: 18px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .card:hover {
+      border-color: #6d4bc3;
+      transform: translateY(-2px);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 5px 11px;
+      border-radius: 20px;
+      background: #25203a;
+      color: #c4b5fd;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    h2 {
+      margin: 15px 0 8px;
+      font-size: 19px;
+    }
+
+    .description {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .code {
+      padding: 12px;
+      margin-bottom: 12px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      background: #0c0c12;
+      border: 1px solid #222233;
+      border-radius: 9px;
+      color: #c4b5fd;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 11px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      user-select: text;
+    }
+
+    .btn {
+      width: 100%;
+      min-height: 44px;
+      padding: 12px 16px;
+      border: 0;
+      border-radius: 10px;
+      background: var(--purple);
+      color: white;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn:hover {
+      background: #7c3aed;
+    }
+
+    .btn:focus-visible,
+    a:focus-visible {
+      outline: 2px solid white;
+      outline-offset: 4px;
+    }
+
+    .btn:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+    }
+
+    .coming-soon {
+      padding: 12px;
+      margin: 14px 0;
+      border: 1px dashed #39334f;
+      border-radius: 9px;
+      color: #a78bfa;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    footer {
+      margin-top: 30px;
+      color: #666677;
+      font-size: 12px;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 30px 14px;
+      }
+
+      .card {
+        padding: 18px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<h1>Renainttuff <span>Scripts</span></h1>
-<p style="color:#9ca3af">Multiple script available MM2, SAB, ADM, etc</p>
-<p><a href="https://discord.gg/GHQSmVwDRw" target="_blank">DISCORD</a> | <a href="https://youtube.com/@thundermodzz" target="_blank">YOUTUBE</a></p>
+  <header>
+    <h1>Renainttuff <span>Scripts</span></h1>
+    <p class="subtitle">
+      Multiple scripts available for MM2, SAB, ADM, and more.
+    </p>
 
-<div class="card">
-<span class="badge">MM2</span>
-<h3>MM2 - Shinichi Hub</h3>
-<p style="color:#9ca3af;font-size:13px">Multiple features: Candy farm, ESP, Coins</p>
-<div class="code">loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderModz/Mm2AutofarmEtc/refs/heads/main/MurderMysteryV2"))()</div>
-<button class="btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText);this.innerText='Copied!'">Copy Script</button>
-</div>
+    <nav aria-label="Social links">
+      <a href="https://discord.gg/GHQSmVwDRw"
+         target="_blank" rel="noopener noreferrer">
+        DISCORD ↗
+      </a>
+      <a href="https://youtube.com/@thundermodzz"
+         target="_blank" rel="noopener noreferrer">
+        YOUTUBE ↗
+      </a>
+    </nav>
+  </header>
 
-<div class="card">
-<span class="badge">SAB</span>
-<h3>SAB - Steal A Brainrot</h3>
-<p style="color:#9ca3af;font-size:13px">Auto steal, ESP brainrots, auto farm</p>
-<div class="code">loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderModz/Desync/refs/heads/main/SabScriptV2", true))()</div>
-<button class="btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText);this.innerText='Copied!'">Copy Script</button>
-</div>
+  <main>
+    <section class="card">
+      <span class="badge">MM2</span>
+      <h2>MM2 - Shinichi Hub</h2>
+      <p class="description">
+        Multiple features: Candy farm, ESP, and coins.
+      </p>
 
-<div class="card">
-<span class="badge">ADM</span>
-<h3>ADM - Adopt Me</h3>
-<p style="color:#9ca3af;font-size:13px">Auto farm bucks, pet farm, AFK</p>
-<div class="code">soon...</div>
-<button class="btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText);this.innerText='Copied!'">Copy Script</button>
-</div>
+      <div class="code" id="mm2-code">loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderModz/Mm2AutofarmEtc/refs/heads/main/MurderMysteryV2"))()</div>
 
+      <button class="btn" data-copy="mm2-code" type="button">
+        Copy Script
+      </button>
+    </section>
+
+    <section class="card">
+      <span class="badge">SAB</span>
+      <h2>SAB - Steal A Brainrot</h2>
+      <p class="description">
+        Auto steal, brainrot ESP, and auto farm.
+      </p>
+
+      <div class="code" id="sab-code">loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderModz/Desync/refs/heads/main/SabScriptV2", true))()</div>
+
+      <button class="btn" data-copy="sab-code" type="button">
+        Copy Script
+      </button>
+    </section>
+
+    <section class="card">
+      <span class="badge">ADM</span>
+      <h2>ADM - Adopt Me</h2>
+      <p class="description">
+        Auto farm bucks, pet farm, and AFK features.
+      </p>
+
+      <div class="coming-soon">
+        Coming Soon
+      </div>
+
+      <button class="btn" type="button" disabled>
+        Not Available Yet
+      </button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Renainttuff Scripts &copy; <span id="year"></span></p>
+    <p>Use scripts responsibly and follow each game's rules.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    document.querySelectorAll("[data-copy]").forEach((button) => {
+      button.addEventListener("click", async () => {
+        const codeElement = document.getElementById(
+          button.dataset.copy
+        );
+        const code = codeElement.textContent.trim();
+        const originalText = "Copy Script";
+
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(code);
+          } else {
+            const textarea = document.createElement("textarea");
+            textarea.value = code;
+            textarea.style.position = "fixed";
+            textarea.style.opacity = "0";
+            document.body.appendChild(textarea);
+            textarea.select();
+
+            const copied = document.execCommand("copy");
+            textarea.remove();
+
+            if (!copied) {
+              throw new Error("Copy failed");
+            }
+          }
+
+          button.textContent = "Copied!";
+        } catch (error) {
+          button.textContent = "Copy failed - select code";
+        }
+
+        setTimeout(() => {
+          button.textContent = originalText;
+        }, 1800);
+      });
+    });
+  </script>
 </body>
 </html>
